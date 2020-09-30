@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:compile": "node-sass ./css/scss/styles.scss -o ./css",
+    "sass:watch": "node-sass ./css/scss/styles.scss -o ./css -w"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/ktownecreative/Coding-Challenge/issues"
   },
-  "homepage": "https://github.com/ktownecreative/Coding-Challenge#readme"
+  "homepage": "https://github.com/ktownecreative/Coding-Challenge#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
 }
