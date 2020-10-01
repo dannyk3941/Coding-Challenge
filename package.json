@@ -21,5 +21,8 @@
   "homepage": "https://github.com/ktownecreative/Coding-Challenge#readme",
   "devDependencies": {
     "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.0"
   }
 }
