@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 
 $charcoal: #363636;
-$white: #E2E2E2;
+$gray: #E2E2E2;
 $pink: #c6538c;
 $orange: #FF7946;
+$white: #ffffff;
 
-html {
+html, button {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -13,4 +14,95 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  background-color: $gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.container {
+  max-width: 563px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+header {
+  background-color: $charcoal;
+  padding: 2rem 0 1rem 0;
+  .container {
+    color: $white;
+    h1 {
+      width: min-content;
+      text-transform: uppercase;
+      line-height: 0.9;
+    }
+    hr {
+      height: 2px;
+      background-color: $white;
+      border: 0;
+    }
+    h2 {
+      font-weight: 300;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.fa-chart-pie {
+  color: #c6538c;
+}
+
+.card {
+  background-color: $white;
+  border-radius: 1.5rem;
+  margin-top: 2rem;
+  &:last-child {
+    margin-bottom: 2rem;
+  }
+  .card__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    & div:first-child {
+      width: 25%;
+    }
+
+    & div:nth-child(2) {
+      width: 75%;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .card__btn {
+    width: 100%;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $orange;
+    border: 0;
+    padding: 0.35rem 0;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+  }
+}
+
+.card__title {
+  font-size: 2rem;
+  span {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 960px;
+  }
 }
