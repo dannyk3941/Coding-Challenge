@@ -6,7 +6,7 @@ $pink: #c6538c;
 $orange: #FF7946;
 $white: #ffffff;
 
-html {
+html, button {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -51,6 +51,55 @@ header {
     }
   }
 }
+
+.fa-chart-pie {
+  color: #c6538c;
+}
+
+.card {
+  background-color: $white;
+  border-radius: 1.5rem;
+  margin-top: 2rem;
+  &:last-child {
+    margin-bottom: 2rem;
+  }
+  .card__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    & div:first-child {
+      width: 25%;
+    }
+
+    & div:nth-child(2) {
+      width: 75%;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .card__btn {
+    width: 100%;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $orange;
+    border: 0;
+    padding: 0.35rem 0;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+  }
+}
+
+.card__title {
+  font-size: 2rem;
+  span {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+}
+
 
 @media only screen and (min-width: 768px) {
   .container {

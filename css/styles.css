@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,700&display=swap");
-html {
+html, button {
   font-family: 'Roboto Condensed', sans-serif; }
 
 body {
@@ -34,6 +34,43 @@ header {
       font-weight: 300; }
     header .container p {
       margin: 0; }
+
+.fa-chart-pie {
+  color: #c6538c; }
+
+.card {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  margin-top: 2rem; }
+  .card:last-child {
+    margin-bottom: 2rem; }
+  .card .card__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem; }
+    .card .card__description div:first-child {
+      width: 25%; }
+    .card .card__description div:nth-child(2) {
+      width: 75%; }
+      .card .card__description div:nth-child(2) p {
+        margin: 0; }
+  .card .card__btn {
+    width: 100%;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #FF7946;
+    border: 0;
+    padding: 0.35rem 0;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit; }
+
+.card__title {
+  font-size: 2rem; }
+  .card__title span {
+    font-size: 1rem;
+    font-weight: 300; }
 
 @media only screen and (min-width: 768px) {
   .container {
