@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,700&display=swap");
-html, button {
+:root, button {
   font-family: 'Roboto Condensed', sans-serif; }
 
 body {
@@ -33,7 +33,12 @@ header {
     header .container h2 {
       font-weight: 300; }
     header .container p {
-      margin: 0; }
+      margin: 0;
+      font-size: 0.9rem; }
+
+.card-group {
+  list-style: none;
+  padding-left: 0; }
 
 .card {
   background-color: #ffffff;
@@ -41,24 +46,6 @@ header {
   margin-top: 2rem; }
   .card:last-child {
     margin-bottom: 2rem; }
-  .card .card__description {
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0.5rem; }
-    .card .card__description div:first-child {
-      display: flex;
-      align-items: center;
-      width: 25%; }
-      .card .card__description div:first-child i {
-        font-size: 65px;
-        color: #c6538c; }
-      .card .card__description div:first-child img {
-        width: 100%; }
-    .card .card__description div:nth-child(2) {
-      width: 75%; }
-      .card .card__description div:nth-child(2) p {
-        margin: 0;
-        line-height: 1.25; }
   .card .card__btn {
     width: 100%;
     font-size: 16px;
@@ -70,6 +57,24 @@ header {
     padding: 0.35rem 0;
     border-bottom-right-radius: inherit;
     border-bottom-left-radius: inherit; }
+
+.card__description {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0.5rem; }
+  .card__description div:first-child {
+    display: flex;
+    align-items: center;
+    width: 25%; }
+    .card__description div:first-child i {
+      color: #c6538c; }
+    .card__description div:first-child img {
+      width: 100%; }
+  .card__description div:nth-child(2) {
+    width: 75%; }
+    .card__description div:nth-child(2) p {
+      margin: 0;
+      line-height: 1.25; }
 
 .card__title {
   font-size: 2rem;
@@ -90,12 +95,14 @@ header {
       position: relative; }
       .card-group .card:last-child {
         margin-bottom: unset; }
-      .card-group .card .card__description {
-        padding-bottom: 2.5rem; }
-        .card-group .card .card__description div:first-child {
-          width: 35%; }
-        .card-group .card .card__description div:nth-child(2) {
-          width: 65%; }
       .card-group .card .card__btn {
         position: absolute;
-        bottom: 0; } }
+        bottom: 0; }
+        .card-group .card .card__btn:hover {
+          cursor: pointer; }
+  .card__description {
+    padding-bottom: 2.5rem; }
+    .card__description div:first-child {
+      width: 35%; }
+    .card__description div:nth-child(2) {
+      width: 65%; } }
