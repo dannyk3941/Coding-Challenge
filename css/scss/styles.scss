@@ -6,7 +6,7 @@ $pink: #c6538c;
 $orange: #FF7946;
 $white: #ffffff;
 
-html, button {
+:root, button {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -48,8 +48,14 @@ header {
     }
     p {
       margin: 0;
+      font-size: 0.9rem;
     }
   }
+}
+
+.card-group {
+  list-style: none;
+  padding-left: 0;
 }
 
 .card {
@@ -58,31 +64,6 @@ header {
   margin-top: 2rem;
   &:last-child {
     margin-bottom: 2rem;
-  }
-  .card__description {
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0.5rem;
-    & div:first-child {
-      display: flex;
-      align-items: center;
-      width: 25%;
-      i {
-        font-size: 65px;
-        color: #c6538c;
-      }
-      img {
-        width: 100%;
-      }
-    }
-
-    & div:nth-child(2) {
-      width: 75%;
-      p {
-        margin: 0;
-        line-height: 1.25;
-      }
-    }
   }
   .card__btn {
     width: 100%;
@@ -98,6 +79,31 @@ header {
   }
 }
 
+.card__description {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  .card__img {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    i {
+      color: #c6538c;
+      font-size: 70px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  & div:nth-child(2) {
+    width: 75%;
+    p {
+      margin: 0;
+      line-height: 1.25;
+    }
+  }
+}
+
 .card__title {
   font-size: 2rem;
   text-transform: uppercase;
@@ -107,7 +113,6 @@ header {
     text-transform: lowercase;
   }
 }
-
 
 @media only screen and (min-width: 768px) {
   .container {
@@ -123,20 +128,27 @@ header {
       &:last-child {
         margin-bottom: unset;
       }
-      .card__description {
-        padding-bottom: 2.5rem;
-        & div:first-child {
-          width: 35%;
-        }
-    
-        & div:nth-child(2) {
-          width: 65%;
-        }
-      }
       .card__btn {
         position: absolute;
         bottom: 0;
+        &:hover {
+          cursor: pointer;
+        }
       }
+    }
+  }
+
+  .card__description {
+    padding-bottom: 2.5rem;
+    .card__img {
+      width: 35%;
+      i {
+        font-size: 65px;
+      }
+    }
+
+    & div:nth-child(2) {
+      width: 65%;
     }
   }
 }
