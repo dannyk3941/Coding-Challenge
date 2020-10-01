@@ -62,13 +62,14 @@ header {
   display: flex;
   justify-content: center;
   padding: 1rem 0.5rem; }
-  .card__description div:first-child {
+  .card__description .card__img {
     display: flex;
     align-items: center;
     width: 25%; }
-    .card__description div:first-child i {
-      color: #c6538c; }
-    .card__description div:first-child img {
+    .card__description .card__img i {
+      color: #c6538c;
+      font-size: 70px; }
+    .card__description .card__img img {
       width: 100%; }
   .card__description div:nth-child(2) {
     width: 75%; }
@@ -102,7 +103,9 @@ header {
           cursor: pointer; }
   .card__description {
     padding-bottom: 2.5rem; }
-    .card__description div:first-child {
+    .card__description .card__img {
       width: 35%; }
+      .card__description .card__img i {
+        font-size: 65px; }
     .card__description div:nth-child(2) {
       width: 65%; } }

@@ -83,18 +83,18 @@ header {
   display: flex;
   justify-content: center;
   padding: 1rem 0.5rem;
-  & div:first-child {
+  .card__img {
     display: flex;
     align-items: center;
     width: 25%;
     i {
       color: #c6538c;
+      font-size: 70px;
     }
     img {
       width: 100%;
     }
   }
-
   & div:nth-child(2) {
     width: 75%;
     p {
@@ -113,7 +113,6 @@ header {
     text-transform: lowercase;
   }
 }
-
 
 @media only screen and (min-width: 768px) {
   .container {
@@ -141,8 +140,11 @@ header {
 
   .card__description {
     padding-bottom: 2.5rem;
-    & div:first-child {
+    .card__img {
       width: 35%;
+      i {
+        font-size: 65px;
+      }
     }
 
     & div:nth-child(2) {
