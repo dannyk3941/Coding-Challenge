@@ -52,10 +52,6 @@ header {
   }
 }
 
-.fa-chart-pie {
-  color: #c6538c;
-}
-
 .card {
   background-color: $white;
   border-radius: 1.5rem;
@@ -66,22 +62,32 @@ header {
   .card__description {
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 1rem 0.5rem;
     & div:first-child {
+      display: flex;
+      align-items: center;
       width: 25%;
+      i {
+        font-size: 65px;
+        color: #c6538c;
+      }
+      img {
+        width: 100%;
+      }
     }
 
     & div:nth-child(2) {
       width: 75%;
       p {
         margin: 0;
+        line-height: 1.25;
       }
     }
   }
   .card__btn {
     width: 100%;
     font-size: 16px;
+    margin: 0;
     text-transform: uppercase;
     color: $white;
     background-color: $orange;
@@ -94,9 +100,11 @@ header {
 
 .card__title {
   font-size: 2rem;
+  text-transform: uppercase;
   span {
     font-size: 1rem;
     font-weight: 300;
+    text-transform: lowercase;
   }
 }
 
@@ -104,5 +112,31 @@ header {
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 960px;
+  }
+
+  .card-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+    .card {
+      position: relative;
+      &:last-child {
+        margin-bottom: unset;
+      }
+      .card__description {
+        padding-bottom: 2.5rem;
+        & div:first-child {
+          width: 35%;
+        }
+    
+        & div:nth-child(2) {
+          width: 65%;
+        }
+      }
+      .card__btn {
+        position: absolute;
+        bottom: 0;
+      }
+    }
   }
 }
