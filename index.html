@@ -5,7 +5,7 @@
   For this coding challenge you will build a webpage based off of a mockup image.
   Follow the steps below to complete the challenge.
 
-  1. Fork this repo, to create a new repository of your own, to share with your completed work. X
+  1. Fork this repo, to create a new repository of your own, to share with your completed work.
 
   2. You should have an index.html file, along with assets, css, js, and mockup folders. 
 
@@ -48,9 +48,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Danny Kim - Coding-Challenge</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
   </head>
 
   <body>
+    <header>
+      <div class="container">
+        <h1>Open Wallet Project</h1>
+        <hr>
+        <h2>Welcome Back John.</h2>
+        <p>You've donated $2,251 so far. Great Job!</p>
+      </div>
+    </header>
+    <main class="container">
+      <ul class="card-group">
+        <li class="card">
+          <div class="card__description">
+            <div class="card__img">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <div>
+              <h3 class="card__title">$150/<span>mo.</span></h3>
+              <p>Next Giving Plan disbursement occurs on 3/30/20.</p>
+            </div>
+          </div>
+          <button class="card__btn">
+            <i class="fas fa-eye"></i>
+            View Giving Plan
+          </button>
+        </li>
+        <li class="card">
+          <div class="card__description">
+            <div class="card__img">
+              <img src="./assets/imgs/calendar.png" alt="calendar icon">
+            </div>
+            <div>
+              <h3 class="card__title">Woot!</h3>
+              <p>You've donated the last 15 months in a row! Keep it up!</p>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card__description">
+            <div class="card__img">
+              <img src="./assets/imgs/npt-logo.png" alt="national park trust logo">
+            </div>
+            <div>
+              <h3 class="card__title">New!</h3>
+              <p>National Park Trust has just been added.</p>
+            </div>
+          </div>
+          <button class="card__btn">
+            <i class="fas fa-eye"></i>
+            View Charity
+          </button>
+        </li>
+      </ul>
+    </main>
     <script src="./js/index.js"></script>
   </body>
 </html>

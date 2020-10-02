@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass:compile": "node-sass ./css/scss/styles.scss -o ./css",
-    "sass:watch": "node-sass ./css/scss/styles.scss -o ./css -w"
+    "sass:watch": "node-sass ./css/scss/styles.scss -o ./css -w",
+    "server": "live-server --port=8081"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,10 @@
   },
   "homepage": "https://github.com/ktownecreative/Coding-Challenge#readme",
   "devDependencies": {
+    "live-server": "^1.2.1",
     "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.0"
   }
 }

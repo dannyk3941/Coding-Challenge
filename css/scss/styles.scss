@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 
 $charcoal: #363636;
-$white: #E2E2E2;
+$gray: #E2E2E2;
 $pink: #c6538c;
 $orange: #FF7946;
+$white: #ffffff;
 
-html {
+:root, button {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -13,4 +14,141 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  background-color: $gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.container {
+  max-width: 563px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+header {
+  background-color: $charcoal;
+  padding: 2rem 0 1rem 0;
+  .container {
+    color: $white;
+    h1 {
+      width: min-content;
+      text-transform: uppercase;
+      line-height: 0.9;
+    }
+    hr {
+      height: 2px;
+      background-color: $white;
+      border: 0;
+    }
+    h2 {
+      font-weight: 300;
+    }
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.card-group {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card {
+  background-color: $white;
+  border-radius: 1.5rem;
+  margin-top: 2rem;
+  &:last-child {
+    margin-bottom: 2rem;
+  }
+  .card__btn {
+    width: 100%;
+    font-size: 16px;
+    margin: 0;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $orange;
+    border: 0;
+    padding: 0.35rem 0;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+  }
+}
+
+.card__description {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  .card__img {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    i {
+      color: #c6538c;
+      font-size: 70px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  & div:nth-child(2) {
+    width: 75%;
+    p {
+      margin: 0;
+      line-height: 1.25;
+    }
+  }
+}
+
+.card__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  span {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: lowercase;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .card-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+    .card {
+      position: relative;
+      &:last-child {
+        margin-bottom: unset;
+      }
+      .card__btn {
+        position: absolute;
+        bottom: 0;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .card__description {
+    padding-bottom: 2.5rem;
+    .card__img {
+      width: 35%;
+      i {
+        font-size: 65px;
+      }
+    }
+
+    & div:nth-child(2) {
+      width: 65%;
+    }
+  }
 }
